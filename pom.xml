@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.facebook.airlift</groupId>
         <artifactId>airbase</artifactId>
-        <version>100</version>
+        <version>104-SNAPSHOT</version>
     </parent>
 
     <groupId>com.facebook.airlift.discovery</groupId>
@@ -38,25 +38,12 @@
       <tag>HEAD</tag>
   </scm>
 
-    <developers>
-        <developer>
-            <id>dain</id>
-            <name>Dain Sundstrom</name>
-            <email>dain@iq80.com</email>
-        </developer>
-        <developer>
-            <id>mtraverso</id>
-            <name>Martin Traverso</name>
-            <email>mtraverso@gmail.com</email>
-        </developer>
-    </developers>
-
     <properties>
         <air.check.skip-extended>true</air.check.skip-extended>
 
-        <dep.airlift.version>0.198</dep.airlift.version>
+        <dep.airlift.version>0.216-SNAPSHOT</dep.airlift.version>
         <dep.packaging.version>${dep.airlift.version}</dep.packaging.version>
-        <dep.leveldb.version>0.10</dep.leveldb.version>
+        <dep.leveldb.version>0.12</dep.leveldb.version>
     </properties>
 
     <modules>
@@ -138,9 +125,9 @@
             </dependency>
 
             <dependency>
-                <groupId>io.airlift</groupId>
+                <groupId>com.facebook.airlift</groupId>
                 <artifactId>units</artifactId>
-                <version>1.0</version>
+                <version>1.4-SNAPSHOT</version>
             </dependency>
 
             <dependency>
@@ -181,12 +168,12 @@
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>3.6.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-antrun-plugin</artifactId>
-                    <version>1.7</version>
+                    <version>3.6.0</version>
                     <dependencies>
                         <dependency>
                             <groupId>ant-contrib</groupId>
@@ -201,8 +188,8 @@
                         </dependency>
                         <dependency>
                             <groupId>org.apache.ant</groupId>
-                            <artifactId>ant-nodeps</artifactId>
-                            <version>1.8.1</version>
+                            <artifactId>ant</artifactId>
+                            <version>1.10.15</version>
                         </dependency>
                     </dependencies>
                 </plugin>

@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.facebook.airlift</groupId>
+        <groupId>com.github.zacblanco.airbase</groupId>
         <artifactId>airbase</artifactId>
-        <version>104-SNAPSHOT</version>
+        <version>upgradeJava21Jitpack-SNAPSHOT</version>
     </parent>
 
     <groupId>com.facebook.airlift.discovery</groupId>
@@ -36,12 +36,25 @@
         <developerConnection>scm:git:git@github.com:prestodb/discovery.git</developerConnection>
         <url>https://github.com/prestodb/discovery</url>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>jitpack</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jitpack</id>
+            <url>https://jitpack.io</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <properties>
         <air.check.skip-extended>true</air.check.skip-extended>
-
-        <dep.airlift.version>0.216-SNAPSHOT</dep.airlift.version>
+        <dep.airlift.version>upgradeJava21Jitpack-SNAPSHOT</dep.airlift.version>
         <dep.packaging.version>${dep.airlift.version}</dep.packaging.version>
         <dep.leveldb.version>0.12</dep.leveldb.version>
     </properties>
@@ -65,97 +78,97 @@
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>jmx-http-rpc</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>bootstrap</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>concurrent</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>discovery</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>log</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>http-server</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>jaxrs</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>node</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>json</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>trace-token</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>units</artifactId>
-                <version>1.4-SNAPSHOT</version>
+                <version>upgradeJava21Jitpack-SNAPSHOT</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>http-client</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>configuration</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>event</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>jmx</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>com.facebook.airlift</groupId>
+                <groupId>com.github.zacblanco.airlift</groupId>
                 <artifactId>testing</artifactId>
                 <version>${dep.airlift.version}</version>
             </dependency>

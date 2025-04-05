@@ -17,9 +17,8 @@ package com.facebook.airlift.discovery.server;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
-import javax.annotation.concurrent.Immutable;
-
+import com.google.errorprone.annotations.Immutable;
+import com.google.errorprone.annotations.Immutable;
 import java.util.UUID;
 
 import static com.google.common.base.Preconditions.checkArgument;

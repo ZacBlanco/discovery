@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.facebook.airlift</groupId>
         <artifactId>airbase</artifactId>
-        <version>100</version>
+        <version>105</version>
     </parent>
 
     <groupId>com.facebook.airlift.discovery</groupId>
@@ -19,8 +19,8 @@
     <inceptionYear>2010</inceptionYear>
 
     <organization>
-        <name>Airlift</name>
-        <url>http://airlift.io</url>
+        <name>PrestoDB</name>
+        <url>https://prestodb.io</url>
     </organization>
 
     <licenses>
@@ -38,23 +38,10 @@
       <tag>HEAD</tag>
   </scm>
 
-    <developers>
-        <developer>
-            <id>dain</id>
-            <name>Dain Sundstrom</name>
-            <email>dain@iq80.com</email>
-        </developer>
-        <developer>
-            <id>mtraverso</id>
-            <name>Martin Traverso</name>
-            <email>mtraverso@gmail.com</email>
-        </developer>
-    </developers>
-
     <properties>
         <air.check.skip-extended>true</air.check.skip-extended>
 
-        <dep.airlift.version>0.198</dep.airlift.version>
+        <dep.airlift.version>0.217-SNAPSHOT</dep.airlift.version>
         <dep.packaging.version>${dep.airlift.version}</dep.packaging.version>
         <dep.leveldb.version>0.10</dep.leveldb.version>
     </properties>

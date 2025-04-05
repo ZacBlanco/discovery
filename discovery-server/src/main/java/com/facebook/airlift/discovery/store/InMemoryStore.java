@@ -16,8 +16,7 @@
 package com.facebook.airlift.discovery.store;
 
 import com.google.common.base.Preconditions;
-
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 import java.nio.ByteBuffer;
 import java.util.EnumSet;

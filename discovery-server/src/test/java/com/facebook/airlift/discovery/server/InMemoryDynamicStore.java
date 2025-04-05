@@ -19,11 +19,10 @@ import com.google.common.base.Preconditions;
 import com.google.common.base.Supplier;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
+import com.google.errorprone.annotations.ThreadSafe;
 import io.airlift.units.Duration;
+import jakarta.inject.Inject;
 import org.joda.time.DateTime;
-
-import javax.annotation.concurrent.ThreadSafe;
-import javax.inject.Inject;
 
 import java.util.Iterator;
 import java.util.Map;

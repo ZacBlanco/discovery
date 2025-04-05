@@ -37,6 +37,9 @@ import com.google.inject.Binder;
 import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Module;
+import jakarta.ws.rs.core.HttpHeaders;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 import org.iq80.leveldb.util.FileUtils;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -45,8 +48,6 @@ import org.weakref.jmx.guice.MBeanModule;
 import org.weakref.jmx.testing.TestingMBeanServer;
 
 import javax.management.MBeanServer;
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.MediaType;
 
 import java.io.File;
 import java.net.URI;
@@ -64,7 +65,7 @@ import static com.facebook.airlift.http.client.StatusResponseHandler.StatusRespo
 import static com.facebook.airlift.http.client.StatusResponseHandler.createStatusResponseHandler;
 import static com.facebook.airlift.json.JsonCodec.jsonCodec;
 import static com.facebook.airlift.json.JsonCodec.mapJsonCodec;
-import static javax.ws.rs.core.Response.Status;
+import static jakarta.ws.rs.core.Response.Status.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertNull;
@@ -189,7 +190,7 @@ public class TestDiscoveryServer
                 .build();
         JsonResponse<Map<String, Object>> createResponse = client.execute(request, createFullJsonResponseHandler(mapJsonCodec(String.class, Object.class)));
 
-        assertEquals(createResponse.getStatusCode(), Status.CREATED.getStatusCode());
+        assertEquals(createResponse.getStatusCode(), CREATED.getStatusCode());
         String id = createResponse.getValue().get("id").toString();
 
         List<ServiceDescriptor> services = selectorFor("apple", "red").selectAllServices();
@@ -206,7 +207,7 @@ public class TestDiscoveryServer
         request = prepareDelete().setUri(uriFor("/v1/announcement/static/" + id)).build();
         StatusResponse deleteResponse = client.execute(request, createStatusResponseHandler());
 
-        assertEquals(deleteResponse.getStatusCode(), Status.NO_CONTENT.getStatusCode());
+        assertEquals(deleteResponse.getStatusCode(), NO_CONTENT.getStatusCode());
 
         // ensure announcement is gone
         assertTrue(selectorFor("apple", "red").selectAllServices().isEmpty());
